@@ -86,7 +86,7 @@ function addGithub(url, type) {
             var prefix = bugRepo + ": #" + bugNum
             var body = $(data).filter('meta[name="description"]').attr("content");
             var title = $(data).find('.js-issue-title').text();
-            title = title + " (" + type + ")"
+            title = title + " - " + type
             addCard(prefix, title, body, url)
         },
         error: function () {
